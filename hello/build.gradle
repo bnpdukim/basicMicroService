@@ -33,6 +33,8 @@ dependencies {
     implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '2.0.2.RELEASE'
     // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-sleuth
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-sleuth', version: '2.0.2.RELEASE'
+// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-zipkin
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-zipkin', version: '2.0.2.RELEASE'
 
 
     compileOnly 'org.projectlombok:lombok'

@@ -15,11 +15,16 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
     // https://mvnrepository.com/artifact/io.zipkin.java/zipkin-server
     implementation group: 'io.zipkin.java', name: 'zipkin-server', version: '2.12.1'
 
     // https://mvnrepository.com/artifact/io.zipkin.java/zipkin-autoconfigure-ui
     implementation group: 'io.zipkin.java', name: 'zipkin-autoconfigure-ui', version: '2.12.1'
+
+    // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-netflix-eureka-client', version: '2.0.2.RELEASE'
+
     compileOnly 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }

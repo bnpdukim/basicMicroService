@@ -1,0 +1,23 @@
+server:
+  port: 8101
+
+observatory:
+  ip: localhost
+  port: 8761
+
+management:
+  endpoints:
+    web:
+      base-path: /admin
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${observatory.ip}:${observatory.port}/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    status-page-url-path: ${management.endpoints.web.base-path}/info
+    health-check-url-path: ${management.endpoints.web.base-path}/health
+    prefer-ip-address: true
